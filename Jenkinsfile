@@ -32,7 +32,7 @@ pipeline {
         }
           
         steps {
-          sh "wget http://eran1321.mylabserver.com/rectangles/all/rectangle_${env.BUILD_NUMBER}.jar"
+          sh "wget http://18.213.118.157/rectangles/all/rectangle_${env.BUILD_NUMBER}.jar"
           sh "java -jar rectangle_${env.BUILD_NUMBER}.jar 3 4"
         }
     }  
@@ -41,7 +41,7 @@ pipeline {
               docker 'openjdk:8u121-jre'
           }
           steps {
-              sh "wget http://eran1321.mylabserver.com/rectangles/all/rectangle_${env.BUILD_NUMBER}.jar"
+              sh "wget http://18.213.118.157/rectangles/all/rectangle_${env.BUILD_NUMBER}.jar"
               sh "java -jar rectangle_${env.BUILD_NUMBER}.jar 3 4"
           }
     }
